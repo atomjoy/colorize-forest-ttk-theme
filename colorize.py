@@ -230,15 +230,14 @@ if __name__=='__main__':
     createColorDarkTheme(200, 5)
     createColorLightTheme(200, 5)
 
-    # Create images in custom directory
-    # Copy forest-color-dark.tcl to forest-blue-dark.tcl
-    # Copy forest-color-light.tcl to forest-blue-light.tcl
-    # Edit forest-blue-dark.tcl file and replace "forest-color-dark" to "forest-blue-dark"
-    # Edit forest-blue-light.tcl file and replace "forest-color-dlight" to "forest-blue-light"    
+    # Create in custom directory     
     createColorDarkTheme(200, 5, "blue")
     createColorLightTheme(200, 5, "blue")
-
+    
     # Create .tcl files
+    # Create forest-blue-dark.tcl from forest-color-dark.tcl
+    # Create forest-blue-light.tcl from forest-color-light.tcl
+    # Replace color in .tcl files
     createTclDark("blue")
     createTclLight("blue")
 
