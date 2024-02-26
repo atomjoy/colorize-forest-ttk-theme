@@ -76,6 +76,11 @@ ttk.Style().theme_use('forest-color-dark')
 ttk.Style().theme_use('forest-color-light')
 ```
 
+### Images
+
+<img src="https://raw.githubusercontent.com/atomjoy/colorize-forest-ttk-theme/main/screenshots/theme-1.png" width="100%">
+<img src="https://raw.githubusercontent.com/atomjoy/colorize-forest-ttk-theme/main/screenshots/theme-2.png" width="100%">
+
 ### More samples
 
 - <https://github.com/rdbende/Forest-ttk-theme>
