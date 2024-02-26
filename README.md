@@ -1,6 +1,6 @@
 # Colorize Forest theme for ttk
 
-Colorize script creates a template in the selected color from the Forest-ttk-theme templates (hue color).
+Colorize script creates a theme in the selected color from the Forest-ttk-theme templates (hue color).
 
 ## Install
 
@@ -22,17 +22,18 @@ if __name__=='__main__':
     # red: 1, yellow: 50, green: 100, blue: 200, violet: 300, red: 360  
     # Lightnes power: normal: 1, lighter: 10
 
+    # Create theme color blue
     createColorDarkTheme(200, 5)
     createColorLightTheme(200, 5)
 
     # Create color sample
     createSample(200, 5)
 
-    # Create all colors palette samples (power: 1)
+    # Create all colors palette samples (optional)
     createDarkAll(1)
     createLightAll(1)
 
-    # Create all colors palette samples (power: 5)
+    # Create all colors palette samples (optional)
     createDarkAll(5)
     createLightAll(5)
 ```
