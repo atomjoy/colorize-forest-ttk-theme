@@ -205,12 +205,42 @@ def createSample(color=200, power=1, path='forest-dark/check-accent.png'):
     new_img = new_img.enhance(power) 
     new_img.save(dir + '/color_' + str(color) + '_power_' + str(power) +'.png')
 
+def createTclDark(name="color"):    
+    with open ('forest-dark.tcl', 'r' ) as f:
+        content = f.read()
+        # Replace
+        content_new = content.replace('forest-dark', 'forest-' + str(name) + '-dark')
+        # Save
+        fw = open('forest-' + str(name) + '-dark.tcl', "w")
+        fw.write(content_new)
+
+def createTclLight(name="color"):    
+    with open ('forest-light.tcl', 'r' ) as f:
+        content = f.read()
+        # Replace
+        content_new = content.replace('forest-light', 'forest-' + str(name) + '-light')
+        # Save
+        fw = open('forest-' + str(name) + '-light.tcl', "w")
+        fw.write(content_new)
+
 if __name__=='__main__':
 
     # Color (hue) red: 1, yellow: 50, green: 100, blue: 200, violet: 300, red: 360  
     # Lightnes power: normal: 1, light: 10
     createColorDarkTheme(200, 5)
     createColorLightTheme(200, 5)
+
+    # Create images in custom directory
+    # Copy forest-color-dark.tcl to forest-blue-dark.tcl
+    # Copy forest-color-light.tcl to forest-blue-light.tcl
+    # Edit forest-blue-dark.tcl file and replace "forest-color-dark" to "forest-blue-dark"
+    # Edit forest-blue-light.tcl file and replace "forest-color-dlight" to "forest-blue-light"    
+    createColorDarkTheme(200, 5, "blue")
+    createColorLightTheme(200, 5, "blue")
+
+    # Create .tcl files
+    createTclDark("blue")
+    createTclLight("blue")
 
     # Color sample (hue) red: 1, yellow: 50, green: 100, blue: 200, violet: 300, red: 360    
     createSample(1, 5)

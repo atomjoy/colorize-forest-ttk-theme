@@ -9,6 +9,17 @@ if __name__=='__main__':
     createColorDarkTheme(200, 5)
     createColorLightTheme(200, 5)
 
+    # Create in custom directory     
+    # createColorDarkTheme(200, 5, "blue")
+    # createColorLightTheme(200, 5, "blue")
+    
+    # Create .tcl files
+    # Create forest-blue-dark.tcl from forest-color-dark.tcl
+    # Create forest-blue-light.tcl from forest-color-light.tcl
+    # Replace color in .tcl files
+    # createTclDark("blue")
+    # createTclLight("blue")
+
     # Check color sample
     # createSample(200, 5)
 
