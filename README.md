@@ -39,7 +39,7 @@ if __name__=='__main__':
 
 ## Update theme color
 
-Update in forest-color-dark.tcl and forest-color-light.tcl lines with color: "#008bff" to your color (use the color picker on the forest-color-dark directory image).
+Update in **forest-color-dark.tcl** and **forest-color-light.tcl** lines with color: "#008bff" to your color (use the color picker on the forest-color-dark directory image).
 
 ```sh
 # Change #008bff to your color, use the color picker on the forest-color-dark image
