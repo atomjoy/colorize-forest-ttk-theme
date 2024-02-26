@@ -124,7 +124,7 @@ def createLightAll(power=1, thumbs=False):
                     new_img.thumbnail(size)
                     new_img.save(dir_thumbs + '/' + filename + '-' + str(i) +'.png')
 
-def createColorDarkTheme(color=217, power=1, thumbs=False):
+def createColorDarkTheme(color=217, power=1, name="color", thumbs=False):
     # Color hue
     red_hue = color/360
     # Get files from dir
@@ -133,12 +133,12 @@ def createColorDarkTheme(color=217, power=1, thumbs=False):
         file, ext = os.path.splitext(infile)
         filename = os.path.basename(file)
         # Dir
-        dir = 'forest-color-dark'
+        dir = 'forest-' + name + '-dark'
         if not os.path.exists(dir):
             os.makedirs(dir)
         # Thumbs dir
         if thumbs == True:                
-            dir_thumbs = 'forest-color-dark/thumbs'
+            dir_thumbs = 'forest-' + name + '-dark/thumbs'
             if not os.path.exists(dir_thumbs):                
                 os.makedirs(dir_thumbs)
         # Image
@@ -158,7 +158,7 @@ def createColorDarkTheme(color=217, power=1, thumbs=False):
                 new_img.save(dir_thumbs + '/' + filename + '.png')
 
 
-def createColorLightTheme(color=217, power=1, thumbs=False):
+def createColorLightTheme(color=217, power=1, name="color", thumbs=False):
     # Color hue
     red_hue = color/360
     # Get files from dir
@@ -167,12 +167,12 @@ def createColorLightTheme(color=217, power=1, thumbs=False):
         file, ext = os.path.splitext(infile)
         filename = os.path.basename(file)
         # Dir
-        dir = 'forest-color-light'
+        dir = 'forest-' + name + '-light'
         if not os.path.exists(dir):
             os.makedirs(dir)
         # Thumbs dir
         if thumbs == True:                
-            dir_thumbs = 'forest-color-light/thumbs'
+            dir_thumbs = 'forest-' + name + '-light/thumbs'
             if not os.path.exists(dir_thumbs):                
                 os.makedirs(dir_thumbs)
         # Image

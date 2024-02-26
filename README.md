@@ -1,6 +1,6 @@
 # Colorize Forest theme for ttk
 
-Colorize script creates a theme in the selected color from the Forest-ttk-theme templates (hue color).
+Colorize script creates a template in the selected color from the Forest-ttk-theme templates (hue color).
 
 ## Install
 
@@ -18,29 +18,36 @@ from colorize import *
 
 if __name__=='__main__':
     
+    # Create images
     # Color range from 1 to 360 color (hue):
-    # red: 1, yellow: 50, green: 100, blue: 200, violet: 300, red: 360  
+    # Colors red: 1, yellow: 50, green: 100, blue: 200, violet: 300, red: 360
     # Lightnes power: normal: 1, lighter: 10
-
-    # Create theme color blue
     createColorDarkTheme(200, 5)
     createColorLightTheme(200, 5)
+
+    # Create images in custom directory
+    # Copy forest-color-dark.tcl to forest-blue-dark.tcl
+    # Copy forest-color-light.tcl to forest-blue-light.tcl
+    # Edit forest-blue-dark.tcl file and replace "forest-color-dark" to "forest-blue-dark"
+    # Edit forest-blue-light.tcl file and replace "forest-color-dlight" to "forest-blue-light"    
+    createColorDarkTheme(200, 5, "blue")
+    createColorLightTheme(200, 5, "blue")
 
     # Create color sample
     createSample(200, 5)
 
-    # Create all colors palette samples (optional)
+    # Create all colors palette samples (power: 1)
     createDarkAll(1)
     createLightAll(1)
 
-    # Create all colors palette samples (optional)
+    # Create all colors palette samples (power: 5)
     createDarkAll(5)
     createLightAll(5)
 ```
 
 ## Update theme color
 
-Update in **forest-color-dark.tcl** and **forest-color-light.tcl** lines with color: "#008bff" to your color (use the color picker on the forest-color-dark directory image).
+Update in forest-color-dark.tcl and forest-color-light.tcl lines with color: "#008bff" to your color (use the color picker on the forest-color-dark directory image).
 
 ```sh
 # Change #008bff to your color, use the color picker on the forest-color-dark image
